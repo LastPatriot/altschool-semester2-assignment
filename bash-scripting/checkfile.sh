@@ -4,10 +4,9 @@
 # Author: Opeyemi Oluwadare
 # Script: checkfile.sh
 # Description: Checks if files/directory exists in a working directory.
-# Usage: ./countfiles.sh [filename] use Ctrl + c to exit.
+# Usage: ./countfiles.sh [filename], use Ctrl + c to exit.
 # If no directory is provided as an argument, the script will prompt the user for it.
 #------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 # Function to display usage information
 usage() {
@@ -16,7 +15,7 @@ usage() {
     echo "Checks if a specified file exists."
     sleep 1
     echo "If no filename is provided, it will prompt for one."
-    sleep 1
+    sleep 11
 #    exit 1
 }
 

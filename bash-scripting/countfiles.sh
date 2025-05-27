@@ -4,7 +4,7 @@
 # Author: Opeyemi Oluwadare
 # Script: countfiles.sh
 # Description: Counts the number of regular files in a given directory.
-# Usage: ./countfiles.sh [path-for-dir] use Ctrl + c to exit.
+# Usage: ./countfiles.sh [path-for-dir], use Ctrl + c to exit.
 # If no directory is provided as an argument, the script will prompt the user for it.
 #------------------------------------------------------------------------------------------------------------------------------------------------
 
