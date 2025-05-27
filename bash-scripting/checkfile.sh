@@ -15,7 +15,7 @@ usage() {
     echo "Checks if a specified file exists."
     sleep 1
     echo "If no filename is provided, it will prompt for one."
-    sleep 11
+    sleep 1
 #    exit 1
 }
 
@@ -23,8 +23,8 @@ usage() {
 
 file=""
 
-# Check if a filename was provided as a command-line argument
 usage
+# Check if a filename was provided as a command-line argument
 if [ -n "$1" ]; then
     file="$1"
 else
