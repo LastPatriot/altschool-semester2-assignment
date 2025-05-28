@@ -23,7 +23,6 @@ usage() {
 
 dir_path=""
 
-usage
 # Check if a directory path was provided as a command-line argument
 if [ -n "$1" ]; then
     dir_path="$1"
@@ -40,6 +39,7 @@ fi
 # Validate if the provided path is actually a directory
 if [ ! -d "$dir_path" ]; then
     echo "Error: '$ddir_path' is not a valid directory or does not exist."
+    usage
     exit 1
 fi
 

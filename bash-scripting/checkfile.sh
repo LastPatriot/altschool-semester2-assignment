@@ -23,7 +23,6 @@ usage() {
 
 file=""
 
-usage
 # Check if a filename was provided as a command-line argument
 if [ -n "$1" ]; then
     file="$1"
@@ -46,6 +45,7 @@ elif [ -e "$file" ]; then
     echo "Info: '$file' exists but is not a regular file or directory (e.g., a symlink, device file)."
 else
     echo "Error: File '$file' does not exist."
+    usage
     exit 1
 fi
 
