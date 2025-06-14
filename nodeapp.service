@@ -1,0 +1,20 @@
+#/etc/systemd/system/nodeapp.service --path/to/service
+#sudo systemctl daemon-reload --reload the daemon on systemD
+#sudo systemctl enable mynodeapp.service - Enable to start on boot
+#sudo systemctl start mynodeapp.service  - Start it now
+#sudo systemctl status mynodeapp.service - Check status
+#sudo journalctl -u mynodeapp.service -f # View logs in real-time
+
+[Unit]
+Description=My Web Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/ubuntu/projects/web-server/app.js
+WorkingDirectory=/home/ubuntu/projects/web-server
+Restart=always
+#User=root # Run as a non-root user for security
+Environment=PORT=3000
+
+[Install]
+WantedBy=multi-user.target
