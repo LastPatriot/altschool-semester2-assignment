@@ -1,22 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Chidozie Ugwu's Page</title>
-    </head>
-    <body>
-        <h1>I am Opeyemi Oluwadare</h1>
-        <p>I am a student of AltSchool Africa</p>
-        <p>My AltSchool ID is ALT/SOE/024/2921</p>
-        <p>List of things I am learning</p>
-        <ul>
-            <li>Kubernetes</li>
-            <li>Cloud Computing</li>
-            <li>JavaScript</li>
-            <li>Linux</li>
-            <li>Git</li>
-            <li>Bash Script</li>
-        </ul>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluwadare Opeyemi - Lead Cloud Engineer</title>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="container bg-white shadow-xl rounded-2xl p-6 md:p-10 max-w-4xl w-full">
+
+        <!-- Header Section -->
+        <header class="text-center mb-8 md:mb-12">
+            <h1 id="fullNameAndRole" class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-2"></h1>
+            <p class="text-blue-600 text-lg md:text-xl font-semibold">Innovating for Tomorrow</p>
+        </header>
+
+        <!-- Project Section -->
+        <section class="mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-4">
+                Project Title: <span id="projectTitle" class="text-blue-700"></span>
+            </h2>
+            <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-5 mb-6 shadow-md">
+                <h3 class="text-xl font-semibold text-blue-800 mb-3">A Short Pitch:</h3>
+                <p id="projectPitch" class="text-gray-700 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <!-- Professional Bio Section -->
+        <section class="mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-4">
+                Professional Bio
+            </h2>
+            <div id="professionalBioShort" class="text-gray-700 mb-4 leading-relaxed"></div>
+
+            <!-- More details section (initially hidden) -->
+            <div id="professionalBioLong" class="hidden text-gray-700 mb-4 leading-relaxed">
+                <p class="mb-4">I am deeply passionate about various domains within technology, particularly focusing on how to build robust, scalable, and user-friendly systems. My core expertise and interests include:</p>
+                <ul class="list-disc pl-5 space-y-2 mb-4">
+                    <li><strong>Development Operations (DevOps):</strong> Enabling efficient software delivery pipelines through automation and streamlined processes.</li>
+                    <li><strong>Documentation:</strong> Ensuring clarity, accuracy, and accessibility of technical information for diverse audiences.</li>
+                    <li><strong>Distributed Systems:</strong> Designing and implementing resilient, scalable, and high-performing architectures.</li>
+                    <li><strong>Financial Technologies (FinTech):</strong> Exploring and developing innovative solutions to complex financial challenges.</li>
+                </ul>
+                <p class="mb-4">Beyond my technical pursuits, I am a firm believer in community empowerment and social impact. My commitment is reflected in my roles as:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>User Experience Advocate:</strong> Striving to ensure that technology is intuitive, inclusive, and accessible for all users.</li>
+                    <li><strong>Serial Volunteer:</strong> Actively giving back through various initiatives, notably leading <strong class="font-semibold text-blue-700">StudentstoChangemakers</strong>. Here, I guide a vibrant team of young individuals in addressing critical issues of technology and lifestyle awareness in underserved areas across Nigeria.</li>
+                    <li><strong class="font-semibold text-blue-700">Educator and Mentor:</strong> I actively volunteer at numerous industry programs and conferences, continuously seeking opportunities to learn, network, and contribute. Additionally, I am dedicated to building educational platforms designed to help secondary school students and school leavers thrive in the rapidly evolving technological landscape.</li>
+                </ul>
+            </div>
+
+            <button id="toggleBioBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 mb-6">
+                Read More
+            </button>
+
+            <h3 class="text-xl font-semibold text-gray-700 mb-3">Quick Summary:</h3>
+            <ul class="bio-summary grid grid-cols-1 md:grid-cols-2 gap-4" id="bioSummaryList">
+                <!-- Dynamically populated list items -->
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="text-center py-6 border-t-2 border-blue-200 mt-8">
+            <p class="text-gray-600 text-lg mb-4">Feel free to connect!</p>
+            <div class="flex flex-wrap justify-center items-center gap-4">
+                <a id="resumeLink" href="https://opeyemidare.netlify.app/" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75">
+                    View My Resume
+                </a>
+                <button id="copyEmailBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    Copy Email
+                </button>
+            </div>
+            <!-- Message box for email copy confirmation -->
+            <div id="messageBox" class="mt-4 p-3 bg-green-100 text-green-700 rounded-md hidden">
+                Email copied to clipboard!
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data for populating the page
+            const profileData = {
+                name: "Oluwadare Opeyemi",
+                role: "Lead Cloud Engineer",
+                project: {
+                    title: "The Future of Cloud-Modeled Agriculture",
+                    // Updated short pitch as per user's request
+                    pitch: "This project leverages cloud technology to enable farmers to plant closer to their target audience by facilitating co-location for a fair price. It optimizes supply chains and reduces costs, ensuring fresh produce reaches consumers efficiently."
+                },
+                bio: {
+                    short: `I'm a **Cloud Engineer**, **User Experience Advocate**, and **Serial Volunteer** who currently works as a Platform Integration Support at **Standard Bank Group**. I'm passionate about development operations (DevOps), documentation, distributed systems, financial technologies and others.`,
+                    summary: [
+                        { label: "Pronouns", value: "He/him" },
+                        { label: "Fun Fact", value: "I'm currently studying at AltSchool Africa School of Software Engineering Class of 2025." },
+                        { label: "Currently Learning", value: "Cloud Engineering" },
+                        { label: "Seeking Help With", value: "open source projects and hackathons" },
+                        { label: "Job Interests", value: "Cloud Engineer, System administration or DevOps" }
+                    ]
+                },
+                contact: {
+                    email: "oluwadareopeyemis1@gmail.com",
+                    resumeLink: "https://opeyemidare.netlify.app/" // Updated resume link
+                }
+            };
+
+            // --- Populate Static Content ---
+            document.getElementById('fullNameAndRole').textContent = `${profileData.name}, ${profileData.role}`;
+            document.getElementById('projectTitle').textContent = profileData.project.title;
+            document.getElementById('projectPitch').textContent = profileData.project.pitch;
+
+            // Populate short professional bio (using innerHTML for bolding)
+            document.getElementById('professionalBioShort').innerHTML = profileData.bio.short.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-800">$1</strong>');
+
+            // Populate bio summary list
+            const bioSummaryList = document.getElementById('bioSummaryList');
+            profileData.bio.summary.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.classList.add('flex', 'items-start', 'gap-2', 'p-3', 'bg-gray-50', 'rounded-lg', 'shadow-sm');
+                listItem.innerHTML = `<span class="text-blue-500 font-medium">${item.label}:</span> <span class="text-gray-700">${item.value.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>')}</span>`;
+                bioSummaryList.appendChild(listItem);
+            });
+
+            // Set resume link
+            document.getElementById('resumeLink').href = profileData.contact.resumeLink;
+
+
+            // --- Interactive Elements ---
+
+            // 1. Toggle Bio Details
+            const toggleBioBtn = document.getElementById('toggleBioBtn');
+            const professionalBioShort = document.getElementById('professionalBioShort');
+            const professionalBioLong = document.getElementById('professionalBioLong');
+            let isBioExpanded = false; // Track the state
+
+            toggleBioBtn.addEventListener('click', function() {
+                if (isBioExpanded) {
+                    professionalBioLong.classList.add('hidden');
+                    professionalBioShort.classList.remove('hidden');
+                    toggleBioBtn.textContent = 'Read More';
+                } else {
+                    professionalBioShort.classList.add('hidden');
+                    professionalBioLong.classList.remove('hidden');
+                    toggleBioBtn.textContent = 'Show Less';
+                }
+                isBioExpanded = !isBioExpanded; // Toggle the state
+            });
+
+            // Initially hide the long bio and show short bio if JavaScript is enabled
+            professionalBioLong.classList.add('hidden');
+            professionalBioShort.classList.remove('hidden');
+
+
+            // 2. Copy Email to Clipboard
+            const copyEmailBtn = document.getElementById('copyEmailBtn');
+            const messageBox = document.getElementById('messageBox');
+
+            copyEmailBtn.addEventListener('click', function() {
+                // Use a temporary textarea to copy text to clipboard
+                const email = profileData.contact.email;
+                const tempInput = document.createElement('textarea');
+                tempInput.value = email;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy'); // Fallback for older browsers and iframes
+                document.body.removeChild(tempInput);
+
+                // Show confirmation message
+                messageBox.classList.remove('hidden');
+                messageBox.classList.add('animate-fadeIn'); // Simple animation for visibility
+                setTimeout(() => {
+                    messageBox.classList.add('hidden');
+                    messageBox.classList.remove('animate-fadeIn');
+                }, 2000); // Hide after 2 seconds
+            });
+        });
+    </script>
+</body>
 </html>
+
