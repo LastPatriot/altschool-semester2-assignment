@@ -1,5 +1,5 @@
 
-# AltSchool Africa Second Semester Examination - Opeyemi Oluwadare
+# SERVER PROVISIONING AND WEBSERVER DEPLOYMENT - Opeyemi Oluwadare
 
 This project involves setting up a server and deploying a dynamic webpage. Key elements include configuring a reverse proxy to efficiently route requests and implementing SSL/TLS encryption to secure data transmission.
 
@@ -7,7 +7,7 @@ This project involves setting up a server and deploying a dynamic webpage. Key e
 ## Outline
 
  - [Provisioning the server](#server-provisioning)
- - [Deploying the nginx web server](https://github.com/matiassingers/awesome-readme)
+ - [Installing the necessary dependencies](#dependencies)
  - [Configuring the default webpage  on nginx config file](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
   - [Installing Node and deploying the node App](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 
@@ -22,6 +22,24 @@ The server provisioning was done using the AWS cloud console services. An EC2 in
 <img width="1800" alt="Screenshot 2025-06-15 at 12 43 54" src="https://github.com/user-attachments/assets/7b98971c-60d4-468e-8b23-528bc2248b05" />
 <img width="1800" alt="Screenshot 2025-06-15 at 12 45 30" src="https://github.com/user-attachments/assets/ca54597b-7bda-408b-b9b8-195dd03ea2df" />
 
+
+## Installing the necessary dependencies <a id="dependencies"></a>
+
+To deploy this project run
+
+```bash
+  sudo apt update
+```
+```bash
+  sudo apt upgrade
+```
+```bash
+  sudo apt install nodejs
+```
+
+## Demo
+
+A sample video to install node js
 
 https://github.com/user-attachments/assets/c1e36396-fbe3-4805-aa7a-05551b2dfe31
 
