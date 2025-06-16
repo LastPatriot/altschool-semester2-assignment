@@ -8,7 +8,7 @@ This project involves setting up a server and deploying a dynamic webpage. Key e
 
  - [Provisioning the server](#server-provisioning)
  - [Installing the necessary dependencies](#dependencies)
- - [Configuring the default webpage  on nginx config file](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ - [NGINX Installation](#nginx)
   - [Installing Node and deploying the node App](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 
 
@@ -25,7 +25,7 @@ The server provisioning was done using the AWS cloud console services. An EC2 in
 
 ## Installing the necessary dependencies <a id="dependencies"></a>
 
-To deploy this project run
+To install the necessary dependencies, run
 
 ```bash
   sudo apt update
@@ -39,7 +39,35 @@ To deploy this project run
 
 ## Demo
 
-A sample video to install node js
+A demonstration video on how to install node js
 
 https://github.com/user-attachments/assets/c1e36396-fbe3-4805-aa7a-05551b2dfe31
+
+
+## Installing NGINX as the default web server <a id="nginx"></a>
+
+- To install nginx, run
+
+```bash
+  sudo apt install nginx
+```
+
+## Demo
+
+A demonstration video on how to install nginx
+
+https://github.com/user-attachments/assets/d344a961-4785-432b-b79f-3c48e28f2aca
+
+- Then I renamed an already prepared `html` document to `index.nginx-debian.html` (the name for the default html file for nginx)
+- I moved this file to the location of the default nginx html path - `/var/www/html`
+- Then i executed the command below to reload nginx
+  ```bash
+  sudo systemctl reload nginx
+  ```
+
+A demonstration video on file movement to nginx default path
+
+https://github.com/user-attachments/assets/00abc9be-c3af-4ffb-88d0-33c63bca8763
+
+
 
