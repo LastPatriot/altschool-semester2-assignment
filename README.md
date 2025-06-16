@@ -1,5 +1,5 @@
 
-# SERVER PROVISIONING AND WEBSERVER DEPLOYMENT - Opeyemi Oluwadare
+# SERVER PROVISIONING AND WEB SERVER DEPLOYMENT - Opeyemi Oluwadare
 
 This project involves setting up a server and deploying a dynamic webpage. Key elements include configuring a reverse proxy to efficiently route requests and implementing SSL/TLS encryption to secure data transmission.
 
