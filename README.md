@@ -114,10 +114,11 @@ A demonstration video confirming that deployment works as expected.
 https://github.com/user-attachments/assets/c1368d3b-6749-4b73-8925-ae1a8f02b61c
 
 ## Configure Reverse Proxy on NGINX <a id="reverse-proxy"></a>
+For the reverse proxy configuration, a modular approach was adopted rather than directly modifying the default NGINX configuration file. This involves unlinking the default configuration and creating a new, dedicated configuration file for the Node.js application. This method is crucial for scalability and manageability, especially in real-world scenarios where NGINX may be required to proxy multiple applications. By giving each web server its own configuration file, located under the `/etc/nginx/conf.d` path, maintenance becomes significantly more streamlined and the `default` file remains cleaner and more organized.
 
-- Run
+- Run the below to unlink the default file
 ```bash
-unlink /etc/nginx/sites-enabled/default #This will help unlink the default nginx configuration
+unlink /etc/nginx/sites-enabled/default
 ```
 - Navigate to `/etc/nginx/conf.d/`
 - Create a new file named `nodeapp.conf`
