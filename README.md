@@ -164,7 +164,7 @@ unlink /etc/nginx/sites-enabled/default
   }
 ```
 - This will ensure that traffic that matches the pattern `/profile/` will be re-routed to the node web-server.
-- Run the below commands
+- Then, run the below commands to check syntax of the configuration file and reload nginx
 ```bash
 nginx -t #This will help confirm that the configuration file is correct (syntax wise)
 sudo systemctl reload nginx #This will restart nginx with the new configuration
