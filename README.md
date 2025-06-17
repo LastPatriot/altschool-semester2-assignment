@@ -5,13 +5,14 @@ This project involves setting up a server and deploying a dynamic webpage. Key e
 
 ## URL
 See the live project first!!
-- [Proxied page on HTTPS](#)
-- [Proxied page on HTTP](#)
-- [Default NGINX page on HTTPS](#)
-- [Default NGINX page on HTTP](#)
+- [Proxied page on HTTP](http://ec2-18-212-40-40.compute-1.amazonaws.com/profile/)
+- [Proxied page on HTTPS](https://ec2-18-212-40-40.compute-1.amazonaws.com/profile/)
+- [Default NGINX page on HTTP](http://ec2-18-212-40-40.compute-1.amazonaws.com)
+- [Default NGINX page on HTTPS](https://ec2-18-212-40-40.compute-1.amazonaws.com)
 
 ## Outline
 
+ - [Technologies Used](#tech)
  - [Provisioning the server](#server-provisioning)
  - [Installing the necessary dependencies](#dependencies)
  - [NGINX Installation](#nginx)
@@ -21,6 +22,18 @@ See the live project first!!
  - [Enabling port 443 on NGINX using self-signed certificate](#port-443)
  - [Screenshots of the rendered page in a web browser](#render)
 
+
+## Technologies Used <a id="tech"></a>
+
+This project utilized the following technologies:
+
+- AWS EC2: For provisioning and managing the virtual server instance.
+- Ubuntu Server: The operating system running on the EC2 instance.
+- Nginx: Used as the web server and reverse proxy.
+- Node.js: For developing and running the dynamic web application.
+- Express.js: A Node.js web application framework used for the web server.
+- OpenSSL: For generating the self-signed SSL/TLS certificate.
+- Systemd: For managing the Node.js web server as a daemon.
 
 ## Server Provisioning <a id="server-provisioning"></a>
 
@@ -195,5 +208,10 @@ A pictorial representation of the self-signed certificate on the webpage
 - Default nginx page
 <img width="1800" alt="Screenshot 2025-06-17 at 00 01 15" src="https://github.com/user-attachments/assets/1892ce1b-4f63-433d-88da-ec4f9d0b2205" />
 
-  
+
+## Contact
+
+For inquiries, you can reach Opeyemi Oluwadare at:
+* **Phone:** 08167877918
+* **Email:** oluwadareopeyemis1@gmail.com
 
