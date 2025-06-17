@@ -3,7 +3,7 @@
 
 This project involves setting up a server and deploying a dynamic webpage. Key elements include configuring a reverse proxy to efficiently route requests and implementing SSL/TLS encryption to secure data transmission.
 
-## URL
+## PROJECT URL
 See the live project first!!
 - [Proxied page on HTTP](http://ec2-18-212-40-40.compute-1.amazonaws.com/profile/)
 - [Proxied page on HTTPS](https://ec2-18-212-40-40.compute-1.amazonaws.com/profile/)
